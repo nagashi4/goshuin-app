@@ -21,6 +21,23 @@ end
     @stamp = Stamp.find(params[:id])
    end
 
+   def edit
+    @stamp = Stamp.find(params[:id])
+   end
+
+   def update
+      @stamp = Stamp.find(params[:id])
+      @stamp.update(stamp_params)
+      if @stamp.save
+        
+        redirect_to action: :show
+      else
+        render :edit
+      end
+    end
+   
+
+
 
   private  
 

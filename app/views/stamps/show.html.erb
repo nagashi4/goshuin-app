@@ -7,7 +7,7 @@
       <%= link_to "by #{@stamp.user.name}", root_path, class: :prototype__user %>
       <% if user_signed_in? && current_user.id == @stamp.user_id %>
         <div class="prototype__manage">
-          <%= link_to "編集する", root_path, class: :prototype__btn %>
+          <%= link_to "編集する", edit_stamp_path, class: :prototype__btn %>
           <%= link_to "削除する", root_path, class: :prototype__btn %>
         </div>
         <% end %>
