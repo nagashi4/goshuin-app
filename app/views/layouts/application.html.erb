@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProtoSpace</title>
+    <title>Goshuin-app</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -21,7 +21,7 @@
           <% if user_signed_in? %>
             <div class="nav__right"> 
                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-               <%= link_to "New Stamp", root_path, class: :nav__btn %>
+               <%= link_to "New Stamp", new_stamp_path, class: :nav__btn %>
              </div> 
           <%# // ログインしているときは上記を表示するようにしましょう %>
           <%# ログインしていないときは以下を表示するようにしましょう %>
