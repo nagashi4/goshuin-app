@@ -19,6 +19,8 @@ end
 
    def show
     @stamp = Stamp.find(params[:id])
+    @comment = Comment.new
+    @comments = @stamp.comments.includes(:user)
    end
 
    def edit
