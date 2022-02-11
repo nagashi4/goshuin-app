@@ -1,8 +1,8 @@
 <%= form_with model: @stamp, local: true do |f|%>
 <div class="card">
-  <%= link_to image_tag(stamp.image, class: :card__img ), root_path%>
+  <%= link_to image_tag(stamp.image.variant(resize: '500x500'), class: :card__img ), stamp_path(stamp.id)%>
   <div class="card__body">
-    <%= link_to stamp.prefecture, root_path, class: :card__title%>
+    <%= link_to stamp.prefecture, stamp_path(stamp.id), class: :card__title%>
     <p class="card__summary">
       <%= stamp.place  %>
     </p>
