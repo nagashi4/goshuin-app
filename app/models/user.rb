@@ -11,4 +11,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :stamps
+  has_many :comments
 end
