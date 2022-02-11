@@ -35,6 +35,13 @@ end
         render :edit
       end
     end
+
+    def destroy
+      stamp = Stamp.find(params[:id])
+      stamp.destroy
+      redirect_to root_path
+    end
+
    
 
 
