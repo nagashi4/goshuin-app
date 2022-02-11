@@ -1,4 +1,8 @@
 class StampsController < ApplicationController
+
+  before_action :authenticate_user!, only: [:edit,:new,:destroy]
+  before_action :move_to_index, only: [:edit]
+  
   def index
     @stamps = Stamp.all
   end
@@ -52,6 +56,12 @@ end
 
   def stamp_params
     params.require(:stamp).permit(:title, :prefecture, :place, :image).merge(user_id: current_user.id)
+  end
+  def move_to_index
+    @stamp = Stamp.find(params[:id])
+    unless   current_user.id == @stamp.user_id
+      redirect_to action: :index
+    end
   end
 end
 
