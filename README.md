@@ -19,12 +19,12 @@
 
 ## stamps テーブル
 
-| Column     | Type       | Options                        |
-| ------     | ---------- | ------------------------------ |
-| title      | string     | null: false                    |
-| prefecture | text       | null: false                    |
-| place      | text       | null: false                    |
-| user       | references | null: false, foreign_key: true |
+| Column        | Type       | Options                        |
+| ------        | ---------- | ------------------------------ |
+| title         | string     | null: false                    |
+| prefecture_id | integer       | null: false                    |
+| place         | text       | null: false                    |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 

@@ -6,7 +6,9 @@
 
   <div class="field">
     <%= f.label :prefecture, "都道府県" %><br />
-    <%= f.text_area :prefecture, class: :form__text, id:"stamp_prefecture" %>
+    <%#<%= f.text_area :prefecture, class: :form__text, id:"stamp_prefecture" %>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
+
   </div>
 
   <div class="field">

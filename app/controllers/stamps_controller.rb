@@ -55,7 +55,7 @@ end
   private  
 
   def stamp_params
-    params.require(:stamp).permit(:title, :prefecture, :place, :image).merge(user_id: current_user.id)
+    params.require(:stamp).permit(:title, :prefecture_id, :place, :image).merge(user_id: current_user.id)
   end
   def move_to_index
     @stamp = Stamp.find(params[:id])
