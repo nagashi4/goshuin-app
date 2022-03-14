@@ -1,53 +1,15 @@
-# テーブル設計
-
-## users テーブル
-
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
-| name               | string | null: false               |
-| profile            | text   | null: false               |
-| occupation         | text   | null: false               |
-| position           | text   | null: false               |
-
-### Association
-
-- has_many :stamps
-- has_many :comments
 
 
-## stamps テーブル
 
-| Column        | Type       | Options                        |
-| ------        | ---------- | ------------------------------ |
-| title         | string     | null: false                    |
-| prefecture_id | integer       | null: false                    |
-| place         | text       | null: false                    |
-| user          | references | null: false, foreign_key: true |
+アプリケーション名	
 
-### Association
+御朱印アプリ
 
-- belongs_to :user
-- has_many :comments
+アプリケーション概要	
 
-## comments テーブル
+自身の御朱印帳の記録をデジタルデータとして記録する。
 
-| Column       | Type       | Options                        |
-| -------      | ---------- | ------------------------------ |
-| content      | text       | null:false                     |
-| stamp        | references | null: false, foreign_key: true |
-| user         | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :stamp
-
-
-アプリケーション名	御朱印アプリ
-
-アプリケーション概要	自身の御朱印帳の記録をデジタルデータとして記録する。
+本番環境
 
 URL	 https://goshuin-app-36973.herokuapp.com/
 
@@ -95,3 +57,50 @@ fe925c810773996e54f54e4a8d1d537e)
 ローカルでの動作方法	git clone https://github.com/nagashi4/goshuin-app.git
 
 （mySQL、Ruby:2.6.5p114 Rails: 6.0.4.4）
+
+
+# テーブル設計
+
+## users テーブル
+
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| name               | string | null: false               |
+| profile            | text   | null: false               |
+| occupation         | text   | null: false               |
+| position           | text   | null: false               |
+
+### Association
+
+- has_many :stamps
+- has_many :comments
+
+
+## stamps テーブル
+
+| Column        | Type       | Options                        |
+| ------        | ---------- | ------------------------------ |
+| title         | string     | null: false                    |
+| prefecture_id | integer       | null: false                    |
+| place         | text       | null: false                    |
+| user          | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- has_many :comments
+
+## comments テーブル
+
+| Column       | Type       | Options                        |
+| -------      | ---------- | ------------------------------ |
+| content      | text       | null:false                     |
+| stamp        | references | null: false, foreign_key: true |
+| user         | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :stamp
