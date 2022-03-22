@@ -1,19 +1,21 @@
 
 
 
-アプリケーション名	
+*アプリケーション名*
 
 御朱印アプリ
 
-アプリケーション概要	
+*アプリケーション概要*
 
 自身の御朱印帳の記録をデジタルデータとして記録する。
 
-本番環境
+*本番環境*
 
 URL	 https://goshuin-app-36973.herokuapp.com/
 
-テスト用アカウント	taro:メールアドレス trc@451 パスワード：yxz1354
+*テスト用アカウント*	
+
+taro:メールアドレス trc@451 パスワード：yxz1354
 
 Basic認証等:ID admin/Pass 2222 
 
@@ -21,7 +23,9 @@ Basic認証等:ID admin/Pass 2222
 
 目指した課題解決	御朱印帳を集めている人が紙媒体でなく、デジタルデータとして保存することを目指した。さらに御朱印を集めている人たちが集まり共有できるものとした。
 
-洗い出した要件	サインイン/ログインページ
+*洗い出した要件*
+
+            	サインイン/ログインページ
 
               トップページ（共有された写真を一覧表示するページ）
 
@@ -33,7 +37,7 @@ Basic認証等:ID admin/Pass 2222
 
               マイページ
 
-実装した機能について 
+*実装した機能について*
 
 画像投稿機能を実装
 
@@ -54,7 +58,9 @@ Basic認証等:ID admin/Pass 2222
 データベース設計	[![Image from Gyazo](https://i.gyazo.com/fe925c810773996e54f54e4a8d1d537e.png)](https://gyazo.com/
 fe925c810773996e54f54e4a8d1d537e)
 
-ローカルでの動作方法	git clone https://github.com/nagashi4/goshuin-app.git
+*ローカルでの動作方法*
+
+	git clone https://github.com/nagashi4/goshuin-app.git
 
 （mySQL、Ruby:2.6.5p114 Rails: 6.0.4.4）
 
